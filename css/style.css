@@ -53,16 +53,16 @@ header nav ul{
 }
 
 
-nav ul a{
+nav ul li a{
 	text-decoration: none;
 	font-family: consolas;
-	color: black;
-	background: inherit;	
+	color: black;	
 	margin-right: 0.5%; 
 	height: 100%;
+	text-align: center;
 }
 
-nav ul a li{
+nav ul li{
 	list-style: none;
 	font-size: 25px;
 	border-radius: 5px;
@@ -70,25 +70,26 @@ nav ul a li{
 	padding-right: 40px;
 	padding-left: 30px;
 	text-shadow: 0px 2px 1px rgba(0,0,0,0.2);
-	text-align: center;
 	transition: text-shadow 0.5s, box-shadow 0.5s;
 	-webkit-transition: text-shadow 0.5s, box-shadow 0.5s;
 }
 
-nav ul a li:hover{
+nav ul li:hover{
 	background: grey;
 	color: white;
 	text-shadow: 2px 2px 4px #000000;
-	border-radius: 5px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+nav ul li a:hover{
+	color: white;
 }
 
 section{
 
 	display: flex;
 	justify-content: center;
-	/*background: linear-gradient(180deg,  rgb(176,188,198),rgb(160,180,190));*/
-	background: url(../images/bg1.png) left top no-repeat;
+	background: url(../images/bg1.png) left top repeat;
 	padding: 1%;	
 }
 
@@ -103,21 +104,19 @@ section .main{
 	padding: 2%;
 	padding-top:5%;
 }
-
+/*these columns are for cv*/
 .columns{
 	display: flex;
 	flex-flow: row nowrap;
-	border: 2px solid black;
 	width: 100%;
 }
 
 .column1{
-	border: 1px solid red;
 	width: 50%;
 }
 
 .column2{
-	border: 1px solid blue;
+	text-align: center;
 	width: 50%;
 }
 
@@ -155,7 +154,7 @@ h2{
 	font-size: 25px;
 	font-family: 'Mongolian baiti';
 }
-
+/*this is from index page from now*/
 .click{
 	display: flex;
 	flex-flow: row wrap;
@@ -211,7 +210,7 @@ text-shadow: 2px 5px 7px rgba(0,0,0,0.3);
 	text-shadow: 2px 8px 7px rgba(0,0,0,0.3);
 }
 
-
+/*this is from the social page from now*/
 .social{
 	width:50px;
 	height:50px;
@@ -223,6 +222,7 @@ text-shadow: 2px 5px 7px rgba(0,0,0,0.3);
 	width: 60px;
 }
 
+/*this is for the contacts page from now*/
 #map{
 	position: static;
 	height: 300px;
@@ -299,16 +299,20 @@ form{
 	width: 80%;
 }
 
+.columns{
+	flex-flow: column wrap;
+}
+
 @keyframes imgmove{
 	0%{left:-19%;}
 	100%{left:19%;}
 }
 
-header nav ul a{
+header nav ul li{
 	margin: 0;
 }
 
-header nav ul a li{
+header nav ul li{
 	padding: 20px 0 20px 0;
 	margin: 1px 0 1px 0;
 	background: white;
